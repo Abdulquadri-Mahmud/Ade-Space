@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background: #ebf0fa;
+}
+/* .topNav{
+  @apply flex justify-between items-center
+  w-full bg-slate-800 py-3 text-white
+} */
+
+.sec-nav{
+  @apply
+    flex justify-between items-center py-4 px-5
+}
+nav{
+  /* @apply */
+    
+}
+nav a{
+  @apply
+    uppercase
+    font-semibold
+}
+a{
+  @apply text-sm font-medium p-2
+}
+
+.contact-nav{
+  @apply w-full
+}
+
+.contact-nav a{
+  @apply px-2
+  md:bg-slate-200 mx-1 md:text-black text-slate-50 rounded
+    font-thin duration-200 text-center
+}
+.contact-nav a:hover{
+  @apply bg-slate-500 text-white
+}
+
+/* second navigations */
+
+.sec-nav{
+  @apply bg-slate-50 w-full
+}
+.nav{
+  @apply lg:w-[80%] mx-auto flex justify-between items-center
+}
+
+nav a{
+  @apply px-3 text-slate-800 
+    duration-200 relative
+}
+nav a:hover{
+  @apply text-red-500
+}
+nav a:focus{
+  @apply text-red-500
+}
+
+nav a::before{
+  content: '';
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  transition: all 0.3s;
+  @apply bg-red-500
+}
+
+nav a:hover::before{
+  width: 100%;
+}
+nav a:focus::before{
+  width: 100%;
+  @apply bg-red-500
+}
+
+.sidenav{
+  padding-top: 5rem;
+}
+.sidenav a{
+  display: block;
+  @apply py-3
+    pl-10 font-medium duration-200
+}
+.sidenav a:hover{
+  @apply text-red-500
+}
+
+/* hero */
+.hero{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-blend-mode: multiply;
+  @apply bg-gray-400 text-white
+    flex justify-center items-center flex-col
+}
+
+.hero-text h2{
+  @apply lg:text-6xl md:text-4xl text-2xl font-bold
+  text-center 
+}
+
+.hero-text p{
+  @apply md:text-2xl text-xl py-6;
+}
+.hero-form{
+  @apply md:max-w-[90%] max-w-[97%] mx-auto
+    p-2 bg-slate-50 text-black rounded-md
+}
+
+.hero-form form{
+  @apply flex justify-center items-center flex-wrap relative
+  py-2
+}
+.hero-form form > div{
+  width: 50%;
+  @apply flex gap-2 items-center md:flex-row flex-col
+}
+.hero-form form > div input{
+  width: 100%;
+  @apply p-2 bg-slate-200 rounded-md
+    outline-none border-0
+}
+
+/* .rest-icon, .locate{
+  @apply absolute right-3
+} */
+
+/* sections */
+section{
+  padding: 5rem 1rem;
+}
+section h1{
+  @apply text-2xl text-center md:text-3xl font-semibold text-slate-700
+}
+section p{
+  @apply pt-5 text-center font-semibold text-slate-500
+}
+
+.hero-form form > div.button{
+  width: 200px;
+  @apply absolute -bottom-[3.7rem]
+    bg-white p-2 bg-red-500
+}
+.hero-text form .button button{
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.hero-box > div{
+  width: 150px;
+  height: 150px;
+  @apply bg-slate-200 shadow-md rounded-md
+    duration-200
+}
+.hero-box > div:hover{
+  @apply
+    shadow-lg text-slate-700 translate-y-2
+}
+.card-cont{
+  @apply flex flex-wrap justify-center gap-4
+}
+.card{
+  padding: 2rem;
+  @apply shadow-md rounded-md bg-slate-200 duration-200 md:w-[350px] w-full
+}
+.card:hover{
+  @apply bg-red-500 text-slate-50 shadow-lg
+}
+.card:hover > h2, .card:hover > p{
+  @apply text-slate-50
+}
+.card:hover > .button button{
+  @apply bg-slate-200 text-slate-700 font-semibold
+}
+
+.card .icon{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  @apply bg-slate-50 flex justify-center items-center mx-auto mb-7
+}
+
+.card .button {
+  @apply mt-10
+}
+.card .button button{
+  @apply bg-red-500 text-slate-50 font-semibold w-[150px] py-2 rounded-md
+}
+@media screen and (max-width: 768px) {
+  .card{
+    /* width: 90%; */
+  }
+  
+}
+
+.radius{
+  border-radius: 0px 30px 50% 30px;
+}
